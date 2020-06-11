@@ -13,3 +13,11 @@ before(function (done) {
         console.log('Error in connection', error);
     })
 })
+
+// dropping a collection before performing a test
+beforeEach(function (done) {
+    mongoose.connection.collections.equityfunds.drop(function () {
+        console.log('The DataDB is fresh, you may perform the tests')
+        done();
+    })
+})
