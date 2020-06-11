@@ -1,0 +1,23 @@
+{
+  "name": "mongo-series",
+  "version": "1.0.0",
+  "description": "This Repo provides daily dose of MongoExperiments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madhu5A3/mongo-series.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Madhu5A3/mongo-series/issues"
+  },
+  "homepage": "https://github.com/Madhu5A3/mongo-series#readme",
+  "dependencies": {
+    "mongoose": "^5.9.18"
+  }
+}
