@@ -9,7 +9,7 @@ const EquitySchema = new Schema({
     returns: Number
 });
 
-//Model
+//Model - (collection_name,schema)
 const EquityFund = mongoose.model('equityfund',EquitySchema)
 
-module.exports = EquityFund
+module.exports = EquityFund;
