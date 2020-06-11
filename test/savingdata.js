@@ -1,7 +1,7 @@
-const mocha = require('mocha');
 const assert = require('assert');
 const EquityFund = require('../models/equityfund');
-
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise
 describe('Saving Records', function (done) {
 
     //unit tests 
