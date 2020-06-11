@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
 
-// connect to mongodb
-mongoose.connect('mongodb://localhost/mongoexperimentation')
+//es6 promises
+mongoose.Promise = global.Promise
 
-mongoose.connection.once('open', function() {
+// connect to mongodb
+mongoose.connect('mongodb://localhost/mongoexperimentation', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.once('open', function () {
     console.log('Connection successfully made');
-}).on('error', function(){
-    console.log('Error in connection',error);
+}).on('error', function () {
+    console.log('Error in connection', error);
 })
