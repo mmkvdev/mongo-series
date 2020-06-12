@@ -7,8 +7,10 @@ mongoose.Promise = global.Promise
 
 describe('Finding Records', function () {
 
+    var data_frag;
+
     beforeEach(function (done) {
-        const data_frag = new EquityFund({
+        data_frag = new EquityFund({
             name: 'Blue Chip'
         });
 
@@ -22,6 +24,14 @@ describe('Finding Records', function () {
     it('Find one record from the database', function (done) {
         EquityFund.findOne({ name: 'Blue Chip' }).then(function (result) {
             assert(result.name === 'Blue Chip');
+            done();
+        })
+    })
+
+    //finding a record by ObjectID
+    it('Find a record by ID from the database', function (done) {
+        EquityFund.findOne({ _id: data_frag._id }).then(function (result) {
+            assert(result._id.toString() === data_frag._id.toString());
             done();
         })
     })
