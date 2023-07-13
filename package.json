@@ -19,6 +19,6 @@
   "homepage": "https://github.com/Madhu5A3/mongo-series#readme",
   "dependencies": {
     "mocha": "^8.0.1",
-    "mongoose": "^5.9.18"
+    "mongoose": "^5.13.15"
   }
 }
